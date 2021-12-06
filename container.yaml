@@ -1,0 +1,19 @@
+---
+  - hosts: all
+    become: true
+    vars:
+            ansible_python_interpreter: /usr/bin/python3
+    tasks:
+            - name: Creating a persistent volume dir
+              file:
+                      path: "/root/pv"
+                      state: directory
+
+            - name: Launching python container
+              docker_container:
+                      name: pyapp1
+                      image: pyapp:v1
+                      exposed_ports:
+                              - "8080"
+                      ports:
+                              - "8888:8080"
