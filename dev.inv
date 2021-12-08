@@ -1,0 +1,2 @@
+[production]
+node1 ansible_ssh_host=3.110.167.61
