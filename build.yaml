@@ -11,6 +11,6 @@
             docker_image:
                     name: pyapp:v1
                     build:
-                            path: /var/lib/jenkins/workspace/sketchmakeover
+                            path: /var/lib/jenkins/workspace/pythonsketchmaker
                             dockerfile: dockerfile
                     state: present
