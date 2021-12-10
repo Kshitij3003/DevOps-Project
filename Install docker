@@ -1,0 +1,22 @@
+# First check if there are any updates
+sudo apt-get update
+
+# allow apt to use repositories over the HTTPS protocol
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+# Add docker's official GPG key by executing following command
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Add docker's repositories
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+# update and install docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io
