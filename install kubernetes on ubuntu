@@ -1,0 +1,35 @@
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+#Add the Kubernetes repository(Execute the following command on All the Nodes):
+cat << EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+#Update your packages(Execute the following command on All the Nodes): 
+sudo apt-get update
+
+#Install kubelet, kubeadm, and kubectl(Execute the following command on All the Nodes):
+sudo apt-get install -y kubelet=1.15.7-00 kubeadm=1.15.7-00 kubectl=1.15.7-00
+
+#Hold them at the current version(Execute the following command on All the Nodes):
+sudo apt-mark hold docker-ce kubelet kubeadm kubectl
+
+#Add the iptables rule to sysctl.conf (Execute the following command on All the Nodes):
+echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
+
+#Enable iptables immediately(Execute the following command on All the Nodes:
+sudo sysctl -p
+
+#Initialize the cluster (Execute the following command only on the Master node):
+sudo kubeadm init --pod-network-cidr={AWS VPC CIDE VALUE}
+
+#Set up local kubeconfig(Execute the following command only on the Master node):
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#Apply Flannel CNI network overlay(Execute the following command only on the Master node):
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+#Join the worker nodes to the cluster (Execute the following command only on Node1 and Node2):
+sudo {code generated on master node after running kubeadm init}
