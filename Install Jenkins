@@ -1,3 +1,4 @@
+sudo yum install java-1.8.0-openjdk-devel{install java on centos}
 ## Install java
 sudo apt update && sudo apt install openjdk-8-jdk -y
 
