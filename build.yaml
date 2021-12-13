@@ -11,6 +11,6 @@
             docker_image:
                     name: pyapp:v1
                     build:
-                            path: /var/lib/jenkins/workspace/pythonsketchmaker
+                            path: ${JENKINS_HOME}/workspace/pythonsketch
                             dockerfile: dockerfile
                     state: present
