@@ -1,0 +1,17 @@
+$Install on ubuntu
+sudo snap install --classic heroku
+
+#Connect with heroku CLI
+heroku login
+
+#To Check version
+heroku --version
+
+#To push on heroku
+heroku apps:create PythonSketch
+git add .
+git commit -am "make it better"
+git push heroku master
+
+#Access on 
+https://{your-project-name}.herokuapp.com/
