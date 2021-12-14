@@ -5,7 +5,7 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
     /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update && sudo apt-get install jenkins -y
 
-#Installing ansible
+##Installing ansible
 sudo apt-get update -y
 sudo apt install software-properties-common -y
 sudo apt-add-repository ppa:ansible/ansible
