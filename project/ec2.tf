@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
   ami = "ami-00782a7608c7fc226"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
-  user_data = file("jenkins.sh")
+  user_data = file("jenkins.sh","ansiblemaster.sh")
   availability_zone = "ap-south-1a"
   key_name = "iamubumtu" 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_instance" "web1" {
   ami = "ami-00782a7608c7fc226"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
-  user_data  = file("docker.sh")
+  user_data  = file("docker.sh","ansiblenode.sh")
   key_name = "iamubumtu"
   availability_zone = "ap-south-1a" 
   tags = {
@@ -31,6 +31,7 @@ resource "aws_instance" "web2" {
   instance_type = "t2.medium"
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   key_name = "iamubumtu"
+  user_data = file("ansiblenode.sh")
   availability_zone = "ap-south-1a" 
   tags = {
     Name = "K8master"
