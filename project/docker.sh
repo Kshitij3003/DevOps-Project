@@ -20,3 +20,11 @@ sudo add-apt-repository \
 
 # update and install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
+
+#Installing ansible
+sudo apt-get update -y
+sudo apt install software-properties-common -y
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update -y
+sudo apt install ansible -y
