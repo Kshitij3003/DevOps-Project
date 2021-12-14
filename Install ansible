@@ -1,0 +1,16 @@
+#ON BOTH HOST AND NODE
+sudo apt-get update -y
+sudo apt install software-properties-common -y
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update -y
+sudo apt install ansible -y
+
+#ON HOST
+sudo apt-get update -y
+sudo apt-get install python
+ssh-keygen
+
+#ON SLAVE
+sudo nano .ssh/authorized_keys
+[servers]
+node1 ansible_ssh_host={IP_ADDRESS_OF_NODE1}
