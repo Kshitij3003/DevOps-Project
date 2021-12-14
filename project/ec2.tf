@@ -47,5 +47,16 @@ resource "aws_instance" "web3" {
     Name = "Workernode"
   }
 }
+resource "aws_instance" "web4" {
+  ami = "ami-00782a7608c7fc226"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
+  user_data  = file("docker.sh","ansiblenode.sh")
+  key_name = "iamubumtu"
+  availability_zone = "ap-south-1a" 
+  tags = {
+    Name = "Heroku"
+  }
+}
 
 
