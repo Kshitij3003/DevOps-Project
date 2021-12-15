@@ -31,7 +31,7 @@ resource "aws_instance" "web2" {
   instance_type = "t2.medium"
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   key_name = "iamubumtu"
-  user_data = file("ansiblenode.sh")
+  user_data = file("k8ansible.sh")
   availability_zone = "ap-south-1a" 
   tags = {
     Name = "K8master"
