@@ -15,5 +15,3 @@
                       image: pyapp:v1
                       exposed_ports:
                               - "8080"
-                      ports:
-                              - "8888:8080"
