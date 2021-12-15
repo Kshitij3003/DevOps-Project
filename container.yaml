@@ -3,15 +3,16 @@
     become: true
     vars:
             ansible_python_interpreter: /usr/bin/python3
+            docker_volume: project
     tasks:
-            - name: Creating a persistent volume dir
-              file:
-                      path: "/root/pv"
-                      state: directory
-
+            - name: Creating a volume
+              docker_volume:
+                      name: "{{ docker_volume }}"
             - name: Launching python container
               docker_container:
                       name: pyapp1
                       image: pyapp:v1
                       exposed_ports:
                               - "8080"
+                      volumes:
+                              - project:/app/ 
