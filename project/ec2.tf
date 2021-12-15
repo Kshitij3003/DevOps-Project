@@ -58,5 +58,36 @@ resource "aws_instance" "web4" {
     Name = "Heroku"
   }
 }
+resource "aws_autoscaling_group" "bar" {
+  availability_zones = ["ap-south-1a"]
+  desired_capacity = 5
+  max_size  = 10
+  min_size  = 5
+
+  launch_template {
+    id  = aws_launch_template.web4.id
+    version  = "$Latest"
+  }
+  
+  launch_template {
+    id  = aws_launch_template.web3.id
+    version  = "$Latest"
+  }
+  
+  launch_template {
+    id  = aws_launch_template.web2.id
+    version  = "$Latest"
+  }
+  
+  launch_template {
+    id  = aws_launch_template.web1.id
+    version  = "$Latest"
+  }
+  
+  launch_template {
+    id  = aws_launch_template.web.id
+    version  = "$Latest"
+  }
+}
 
 
