@@ -58,36 +58,59 @@ resource "aws_instance" "web4" {
     Name = "Heroku"
   }
 }
-resource "aws_autoscaling_group" "bar" {
+resource "aws_autoscaling_group" "bar4" {
   availability_zones = ["ap-south-1a"]
-  desired_capacity = 5
-  max_size  = 10
-  min_size  = 5
+  desired_capacity = 1
+  max_size  = 2
+  min_size  = 0
 
   launch_template {
-    id  = aws_launch_template.web4.id
-    version  = "$Latest"
-  }
-  
-  launch_template {
-    id  = aws_launch_template.web3.id
-    version  = "$Latest"
-  }
-  
-  launch_template {
-    id  = aws_launch_template.web2.id
-    version  = "$Latest"
-  }
-  
-  launch_template {
-    id  = aws_launch_template.web1.id
-    version  = "$Latest"
-  }
-  
-  launch_template {
-    id  = aws_launch_template.web.id
+    id  = aws_instance.web4.id
     version  = "$Latest"
   }
 }
+resource "aws_autoscaling_group" "bar3" {
+  availability_zones = ["ap-south-1a"]
+  desired_capacity = 1
+  max_size  = 2
+  min_size  = 0
 
+  launch_template {
+    id  = aws_instance.web3.id
+    version  = "$Latest"
+  }
+}
+resource "aws_autoscaling_group" "bar2" {
+  availability_zones = ["ap-south-1a"]
+  desired_capacity = 1
+  max_size  = 2
+  min_size  = 0
+
+  launch_template {
+    id  = aws_instance.web2.id
+    version  = "$Latest"
+  }
+}
+resource "aws_autoscaling_group" "bar1" {
+  availability_zones = ["ap-south-1a"]
+  desired_capacity = 1
+  max_size  = 2
+  min_size  = 0
+
+  launch_template {
+    id  = aws_instance.web1.id
+    version  = "$Latest"
+  }
+}
+resource "aws_autoscaling_group" "bar" {
+  availability_zones = ["ap-south-1a"]
+  desired_capacity = 1
+  max_size  = 2
+  min_size  = 0
+
+  launch_template {
+    id  = aws_instance.web.id
+    version  = "$Latest"
+  }
+}
 
