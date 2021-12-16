@@ -8,6 +8,8 @@ sudo apt install ansible -y
 
 #Installing Kubernetes
 sudo su
+echo "SELINUX=disabled" > /etc/selinux/config
+echo "SELINUXTYPE=targeted" >> /etc/selinux/config
 yum update -y
 setenforce 0
 swapoff -a
