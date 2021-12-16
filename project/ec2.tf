@@ -45,6 +45,7 @@ resource "aws_instance" "web3" {
   instance_type = "t2.micro"
   disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
+  user_data = file("kubernetes.sh")
   key_name = "iamubumtu"
   availability_zone = "ap-south-1a" 
   tags = {
