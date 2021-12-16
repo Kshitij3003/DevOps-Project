@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo su
 yum update -y
+echo "SELINUX=disabled" > /etc/selinux/config
+echo "SELINUXTYPE=targeted" >> /etc/selinux/config
 setenforce 0
 swapoff -a
 modprobe br_netfilter
