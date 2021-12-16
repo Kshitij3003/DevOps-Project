@@ -7,6 +7,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami = "ami-00782a7608c7fc226"
   instance_type = "t2.micro"
+  disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   user_data = file("jenkins.sh")
   availability_zone = "ap-south-1a"
@@ -18,6 +19,7 @@ resource "aws_instance" "web" {
 resource "aws_instance" "web1" {
   ami = "ami-00782a7608c7fc226"
   instance_type = "t2.micro"
+  disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   user_data  = file("docker.sh")
   key_name = "iamubumtu"
@@ -29,6 +31,7 @@ resource "aws_instance" "web1" {
 resource "aws_instance" "web2" {
   ami = "ami-026f33d38b6410e30"
   instance_type = "t2.medium"
+  disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   key_name = "iamubumtu"
   user_data = file("k8ansible.sh")
@@ -40,6 +43,7 @@ resource "aws_instance" "web2" {
 resource "aws_instance" "web3" {
   ami = "ami-026f33d38b6410e30" 
   instance_type = "t2.micro"
+  disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   key_name = "iamubumtu"
   availability_zone = "ap-south-1a" 
@@ -50,6 +54,7 @@ resource "aws_instance" "web3" {
 resource "aws_instance" "web4" {
   ami = "ami-00782a7608c7fc226"
   instance_type = "t2.micro"
+  disable_api_termination = true
   vpc_security_group_ids = ["sg-05bb9a530211c7d93"]
   user_data  = file("docker.sh")
   key_name = "iamubumtu"
