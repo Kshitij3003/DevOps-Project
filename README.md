@@ -18,11 +18,31 @@ Simply run the command: ***pip install -r requirements.txt**
 ![1](https://user-images.githubusercontent.com/29462447/90712408-959e5000-e2c0-11ea-876f-db71875fe0bd.png)
 ![2](https://user-images.githubusercontent.com/29462447/90712409-9636e680-e2c0-11ea-9b82-a7848403d54c.png)
 
-### CI/CD Pipeline:
+### CI/CD Flow:
 <p align="center">
 <img src="Final Diagram.drawio (1).png" width="900" title="CI/CD Pipeline" align="center">
 </p>
-
+1. Fork this GitHub repository into your GitHub account.
+2. Install Terraform in your local machine or on vitrual machine using the [link .](https://k21academy.com/terraform-iac/terraform-installation-overview/)
+3. Create a directory and keep all the files of Project folder inside it.
+4. Create a security group in the region of your desire with HTTP,HTTPS,ALL TCP, and ALL TRAFFIC having values ANYWHERE. And assign the security group id inside your terraform file to "vpc_security_group_ids". Check the region in which your security group is and set the region and availability zone as per it.
+5. Now run commands as one after another. Terraform init -> Terraform Validate -> Terraform Plan -> Terraform Apply
+6. After running Terraform Apply just wait for minutes to have instance prepared. And as the instance get prepared, access your JENKINS using MASTER PUBLIC IP ADDRESS:8080. (If output is not comming then plz wait as it will take sometime)
+7. Copy and paste the password for JENKINS from the file which is mentioned on the UI of jenkins. Now select Install Suggested Plugins and set your username and password.
+8.  Now you need to allow TCP connection to RANDOM inside JENKINS-MANAGE JENKINS-GLOBAL CONFIGURATION.
+9.  Now connect your ndoe1 using ssh and install JAVA in it.
+10. Now go to JENKINS then MANAGE JENKINS-MANAGE NODES- ADD NODES. Download file mention in Jenkins nodes namely (agent.jar and jenkins-agent.jnlp(cick on launch)).
+11. Copy the command mentioned there and paster it on the node1 and run it.
+12. Repeat steps 8-10 for K8Master and Heroku instance.
+13. Now got to dashboard and build your first job named as GitHub.Refer images in GitHub-GitHub Job images. And in post build select select "Build Other Project" and type Test in it and save.
+14. Now go to <b> Manage Jenkins -> Plugins -> Available -> Ansible -> Install without restart.
+15. Now got to dashboard and build your second job named as Tes.And if you are familiar with the testing part then add test part in it or leave it simple and save. And in post build select select "Build Other Project" and type DockerHub in it and save.
+16. Now got to dashboard and build your third job named as DockerHub.Refer images in GitHub-DockerHub Job images. And use your username and password after "-u" and "-p". And in post build select "Build Other Project" and type Kubernetes in it and save.
+17. Now got to dashboard and build your fourth job named as Heroku.Refer images in GitHub-Heroku Job image.
+18. Now go to <b> Manage Jenkins -> Plugins -> Available -> Build Pipeline -> Install without restart.
+19. Go to dashboard and build UI for pipeline as seen in image insine GitHub-pipeline images.
+20. Now build GitHub jobe and enjoy the continuous integration and deployment.
+ 
 
 ### Deployment on Heroku:
 1. Create the **Aptfile**, **Procfile**, **requirements.txt** and **runtime.txt** accordingly.
