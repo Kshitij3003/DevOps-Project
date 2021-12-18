@@ -18,8 +18,8 @@ Simply run the command: ***pip install -r requirements.txt**
 ![1](https://user-images.githubusercontent.com/29462447/90712408-959e5000-e2c0-11ea-876f-db71875fe0bd.png)
 ![2](https://user-images.githubusercontent.com/29462447/90712409-9636e680-e2c0-11ea-9b82-a7848403d54c.png)
 
-### CI/CD Pipeling:
-<img src="Final Diagram.drawio (1).png" width="350" title="hover text">
+### CI/CD Pipeline:
+<img src="Final Diagram.drawio (1).png" width="800" title="CI/CD Pipeline", align="center">
 
 ### Deployment on Heroku:
 1. Create the **Aptfile**, **Procfile**, **requirements.txt** and **runtime.txt** accordingly.
