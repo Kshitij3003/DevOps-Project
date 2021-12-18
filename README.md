@@ -22,6 +22,8 @@ Simply run the command: ***pip install -r requirements.txt**
 <p align="center">
 <img src="Final Diagram.drawio (1).png" width="900" title="CI/CD Pipeline" align="center">
 </p>
+
+
 ### Deployment on Heroku:
 1. Create the **Aptfile**, **Procfile**, **requirements.txt** and **runtime.txt** accordingly.
   * **Aptfile** - Acts as support for apt-based dependencies during both compile and runtime.
