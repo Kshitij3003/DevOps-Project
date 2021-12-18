@@ -23,7 +23,7 @@ Simply run the command: ***pip install -r requirements.txt**
 <img src="Final Diagram.drawio (1).png" width="900" title="CI/CD Pipeline" align="center">
 </p>
 1. Fork this GitHub repository into your GitHub account.
-2. Install Terraform in your local machine or on vitrual machine using the [link .](https://k21academy.com/terraform-iac/terraform-installation-overview/)
+2. Install Terraform in your local machine or on vitrual machine using the <a href="https://k21academy.com/terraform-iac/terraform-installation-overview/">link.</a>
 3. Create a directory and keep all the files of Project folder inside it.
 4. Create a security group in the region of your desire with HTTP,HTTPS,ALL TCP, and ALL TRAFFIC having values ANYWHERE. And assign the security group id inside your terraform file to "vpc_security_group_ids". Check the region in which your security group is and set the region and availability zone as per it.
 5. Now run commands as one after another. Terraform init -> Terraform Validate -> Terraform Plan -> Terraform Apply
