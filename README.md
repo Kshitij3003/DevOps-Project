@@ -19,9 +19,7 @@ Simply run the command: ***pip install -r requirements.txt**
 ![2](https://user-images.githubusercontent.com/29462447/90712409-9636e680-e2c0-11ea-9b82-a7848403d54c.png)
 
 ### CI/CD Flow:
-<p align="center">
-<img src="Final Diagram.drawio (1).png" width="900" title="CI/CD Pipeline" align="center">
-</p>
+![](Final Diagram.drawio (1).png)
 1. Fork this GitHub repository into your GitHub account.
 2. Install Terraform in your local machine or on vitrual machine using the <a href="https://k21academy.com/terraform-iac/terraform-installation-overview/">link.</a>
 3. Create a directory and keep all the files of Project folder inside it.
