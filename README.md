@@ -10,13 +10,16 @@ A minimalistic computer vision based Web application that makes use of some blur
 ### Installation:
 Simply run the command: ***pip install -r requirements.txt** 
 
-### Usage:
+### Normal Usage:
 1. Clone this Repository to a directory and navigate to that directory.
 2. Run the command: ***python app.py***
 3. This will run the web-app on localhost and would look something like this. Feel free to play around with the codes, add more features, beautify it. :wink:
 
 ![1](https://user-images.githubusercontent.com/29462447/90712408-959e5000-e2c0-11ea-876f-db71875fe0bd.png)
 ![2](https://user-images.githubusercontent.com/29462447/90712409-9636e680-e2c0-11ea-9b82-a7848403d54c.png)
+
+### CI/CD Pipeling:
+
 
 ### Deployment on Heroku:
 1. Create the **Aptfile**, **Procfile**, **requirements.txt** and **runtime.txt** accordingly.
