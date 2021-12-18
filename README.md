@@ -29,15 +29,16 @@ Simply run the command: ***pip install -r requirements.txt**
 7. Copy and paste the password for JENKINS from the file which is mentioned on the UI of jenkins. Now select Install Suggested Plugins and set your username and password.
 8.  Now you need to allow TCP connection to RANDOM inside JENKINS-MANAGE JENKINS-GLOBAL CONFIGURATION.
 9.  Now connect your ndoe1 using ssh and install JAVA in it.
-10. Now go to JENKINS then MANAGE JENKINS-MANAGE NODES- ADD NODES. Download file mention in Jenkins nodes namely (agent.jar and jenkins-agent.jnlp(cick on launch)).
+10. Now go to JENKINS then <b>MANAGE JENKINS-MANAGE NODES- ADD NODES</b>. Download file mention in Jenkins nodes namely (agent.jar and jenkins-agent.jnlp(cick on launch)).
 11. Copy the command mentioned there and paster it on the node1 and run it.
 12. Repeat steps 8-10 for K8Master and Heroku instance.
-13. Now got to dashboard and build your first job named as GitHub.Refer images in GitHub-GitHub Job images. And in post build select select "Build Other Project" and type Test in it and save.
-14. Now go to <b> Manage Jenkins -> Plugins -> Available -> Ansible -> Install without restart.
-15. Now got to dashboard and build your second job named as Tes.And if you are familiar with the testing part then add test part in it or leave it simple and save. And in post build select select "Build Other Project" and type DockerHub in it and save.
-16. Now got to dashboard and build your third job named as DockerHub.Refer images in GitHub-DockerHub Job images. And use your username and password after "-u" and "-p". And in post build select "Build Other Project" and type Kubernetes in it and save.
-17. Now got to dashboard and build your fourth job named as Heroku.Refer images in GitHub-Heroku Job image.
-18. Now go to <b> Manage Jenkins -> Plugins -> Available -> Build Pipeline -> Install without restart.
+13. Now got to dashboard and build your first job named as <b>GitHub</b>.Refer images in GitHub-GitHub Job images. And in post build select select "Build Other Project" and type Test in it and save.
+14. Now go to <b> Manage Jenkins -> Plugins -> Available -> Ansible -> Install without restart</b>.
+ 15. Now got to dashboard and build your second job named as <b>Test</b>.And if you are familiar with the testing part then add test part in it or leave it simple and save. And in post build select select "Build Other Project" and type DockerHub in it and save.
+ 16. Now got to dashboard and build your third job named as <b>DockerHub</b>.Refer images in GitHub-DockerHub Job images. And use your username and password after "-u" and "-p". And in post build select "Build Other Project" and type Kubernetes in it and save.
+ 17. Now got to dashboard and build your fourth job named as <b>Kubernetes</b>.Refer images in GitHub-Kubernetes Job images. And in post build select "Build Other Project" and type Heroku in it and save.
+17. Now got to dashboard and build your fourth job named as <b>Heroku</b>.Refer images in GitHub-Heroku Job image.
+18. Now go to <b> Manage Jenkins -> Plugins -> Available -> Build Pipeline -> Install</b> without restart.
 19. Go to dashboard and build UI for pipeline as seen in image insine GitHub-pipeline images.
 20. Now build GitHub jobe and enjoy the continuous integration and deployment.
  
