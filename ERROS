@@ -1,3 +1,7 @@
 #1 ImagePullBackOff
-kubectl create secret docker-registry secret1         --docker-server=kshitij34/project         --docker-username=kshitij34         --docker-password=kshitij@1234         --docker-email=ksht1994@gmail.com
+Resolution:- kubectl create secret docker-registry secret1         --docker-server=kshitij34/project         --docker-username=kshitij34         --docker-password=kshitij@1234         --docker-email=ksht1994@gmail.com
 #2 ErrImagePull
+Resolution:- check connectivity with dockerhub by pulling image and create container of that image using docker. If it is working then there is some issue in installation of 
+kubernetes and if not then modify your dockerfile.
+#3 Permission Denied while running first job
+Resolution:- Provide permission by running command- chmod -R 777 /var/lib on the stagging node's ec2 instance.
