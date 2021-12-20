@@ -1,10 +1,9 @@
-# :heart: ImageSketchMakeover :heart: [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+# Image Sketch Makeover [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 A minimalistic computer vision based Web application that makes use of some blurring and image blending (dodging and burning) techniques to generate pencil sketch like output for any image fed as input.
 ## Live app available [here.](https://imagesketchmakeover.herokuapp.com/)
 
-![](https://user-images.githubusercontent.com/29462447/90712398-92a35f80-e2c0-11ea-8fe2-031a7e67a0bc.jpg)
-![](https://user-images.githubusercontent.com/29462447/90712401-946d2300-e2c0-11ea-8312-b44e033bb413.jpg)
+![](https://raw.githubusercontent.com/Kshitij3003/DevOps-Project/master/Ouput%20Images/Sketch%20Image.jpeg)
 
 
 ### Installation:
@@ -15,8 +14,7 @@ Simply run the command: ***pip install -r requirements.txt**
 2. Run the command: ***python app.py***
 3. This will run the web-app on localhost and would look something like this. Feel free to play around with the codes, add more features, beautify it. :wink:
 
-![1](https://user-images.githubusercontent.com/29462447/90712408-959e5000-e2c0-11ea-876f-db71875fe0bd.png)
-![2](https://user-images.githubusercontent.com/29462447/90712409-9636e680-e2c0-11ea-9b82-a7848403d54c.png)
+![1](https://raw.githubusercontent.com/Kshitij3003/DevOps-Project/master/Ouput%20Images/publically.png)
 
 ### CI/CD Flow:
 ![](https://raw.githubusercontent.com/Kshitij3003/DevOps-Project/master/Final%20Diagram.drawio%20(1).png)
